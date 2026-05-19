@@ -6,7 +6,7 @@ exports.handler = async function () {
     precoMedio: "Preço médio: R$ 4.499,00",
     statusPreco: "Preço conferido manualmente. Pode mudar a qualquer momento.",
     imagem: "https://via.placeholder.com/500x350?text=Nintendo+Switch+2",
-    link: "https://www.amazon.com.br/dp/CODIGO-DO-PRODUTO?tag=dcbauer0d-20"
+    link: "https://www.amazon.com.br/dp/B0F3GWXLTS?tag=dcbauer0d-20"
   };
 
   return {
