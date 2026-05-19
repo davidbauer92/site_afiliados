@@ -179,30 +179,6 @@ header p {
   text-align: center;
 }
 
-@media (max-width: 700px) {
-  body {
-    padding: 16px;
-  }
-
-  .produto-card {
-    grid-template-columns: 1fr;
-  }
-
-  header h1 {
-    font-size: 26px;
-  }
-
-  .produto-info h2 {
-    font-size: 24px;
-  }
-
-  .preco-atual {
-    font-size: 28px;
-  }
-
-  .botoes {
-    flex-direction: column;
-  }
 
   .filtros {
   display: flex;
@@ -228,4 +204,29 @@ header p {
   color: #fff;
   border-color: #e60012;
 }
+
+@media (max-width: 700px) {
+  body {
+    padding: 16px;
+  }
+
+  .produto-card {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  .produto-info h2 {
+    font-size: 24px;
+  }
+
+  .preco-atual {
+    font-size: 28px;
+  }
+
+  .botoes {
+    flex-direction: column;
+  }
 }
