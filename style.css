@@ -203,4 +203,29 @@ header p {
   .botoes {
     flex-direction: column;
   }
+
+  .filtros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.filtros button {
+  background: #fff;
+  color: #222;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filtros button:hover {
+  background: #e60012;
+  color: #fff;
+  border-color: #e60012;
+}
 }
