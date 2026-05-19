@@ -16,6 +16,12 @@ body {
   margin: 0 auto;
 }
 
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
 header {
   text-align: center;
   margin-bottom: 32px;
@@ -36,10 +42,9 @@ header p {
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
 }
 
 .produto-imagem {
@@ -48,12 +53,14 @@ header p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 12px;
+  height: 220px;
 }
 
 .produto-imagem img {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+  object-fit: contain;
   border-radius: 12px;
 }
 
@@ -205,13 +212,19 @@ header p {
   border-color: #e60012;
 }
 
+@media (max-width: 1000px) {
+  .lista-produtos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 700px) {
   body {
     padding: 16px;
   }
 
-  .produto-card {
-    grid-template-columns: 1fr;
+  .lista-produtos {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   header h1 {
@@ -219,14 +232,20 @@ header p {
   }
 
   .produto-info h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .preco-atual {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .botoes {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-produtos {
+    grid-template-columns: 1fr;
   }
 }
