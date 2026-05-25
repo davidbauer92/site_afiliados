@@ -3,37 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Curadoria de ofertas gamer com links de afiliado, preços conferidos manualmente e produtos selecionados."
+  />
 
-  <title> :*: Peketuxa :*: </title>
+  <title>Peketuxa Store | Ofertas Gamer</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="topbar" aria-label="Navegação principal">
+      <a class="brand" href="#" aria-label="Peketuxa Store">
+        <span class="brand-mark">P</span>
+        <span>
+          <strong>Peketuxa Store</strong>
+          <small>Ofertas gamer verificadas</small>
+        </span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="#ofertas">Ofertas</a>
+        <a href="#curadoria">Curadoria</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Games, consoles e acessórios</span>
+        <h1>Ofertas selecionadas para comprar com mais confiança.</h1>
+        <p>
+          Produtos gamer escolhidos manualmente, com preço conferido no cadastro,
+          loja identificada e link direto para a oferta.
+        </p>
+      </div>
+
+      <div class="hero-panel" aria-label="Resumo da curadoria">
+        <strong>Curadoria ativa</strong>
+        <span>Links de afiliado sem custo adicional para você.</span>
+      </div>
+    </section>
+  </header>
+
   <main class="container">
-    <header>
-      <h1>Site para Camila testar</h1>
-      <p>Peketuxa Store</p>
-    </header>
+    <section class="trust-strip" id="curadoria" aria-label="Critérios de seleção">
+      <article>
+        <strong>Seleção manual</strong>
+        <span>Produtos ligados ao universo gamer.</span>
+      </article>
+      <article>
+        <strong>Lojas identificadas</strong>
+        <span>Você sabe para onde o link leva.</span>
+      </article>
+      <article>
+        <strong>Preço conferido</strong>
+        <span>Valores podem mudar sem aviso.</span>
+      </article>
+    </section>
 
-    <div class="filtros">
-  <button onclick="filtrarProdutos('Todos')">Todos</button>
-  <button onclick="filtrarProdutos('Console')">Console</button>
-  <button onclick="filtrarProdutos('Acessório')">Acessório</button>
-  <button onclick="filtrarProdutos('Jogo')">Jogos</button>
-</div>
+    <section class="ofertas-section" id="ofertas">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Vitrine</span>
+          <h2>Ofertas em destaque</h2>
+        </div>
+        <p>Filtre por categoria e compare rapidamente os produtos disponíveis.</p>
+      </div>
 
-      <section id="listaProdutos" class="lista-produtos">
-        <p>Carregando ofertas...</p>
+      <div class="filtros" aria-label="Filtrar ofertas">
+        <button class="ativo" type="button" data-categoria="Todos">Todos</button>
+        <button type="button" data-categoria="Console">Consoles</button>
+        <button type="button" data-categoria="Acessório">Acessórios</button>
+        <button type="button" data-categoria="Jogo">Jogos</button>
+      </div>
+
+      <section id="listaProdutos" class="lista-produtos" aria-live="polite">
+        <article class="produto-card skeleton">
+          <div class="produto-imagem"></div>
+          <div class="produto-info">
+            <span></span>
+            <strong></strong>
+            <p></p>
+            <p></p>
+          </div>
+        </article>
       </section>
-
-      <section class="detalhes">
-        <h3>Por que essa oferta apareceu aqui?</h3>
-
-      <ul>
-        <li>Produto relacionado a games, consoles ou acessórios.</li>
-        <li>Loja confiável selecionada manualmente.</li>
-        <li>Preço conferido manualmente no momento do cadastro.</li>
-      </ul>
     </section>
 
     <p class="aviso-afiliado">
@@ -41,6 +102,8 @@
       posso receber uma comissão sem custo adicional para você.
     </p>
   </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>
